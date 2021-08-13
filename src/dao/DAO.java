@@ -37,7 +37,7 @@ public abstract class DAO<T> implements DAOInterface<T> {
 		EmbeddedConfiguration config =  Db4oEmbedded.newConfiguration(); 
 		config.common().messageLevel(0);  // 0,1,2,3...
 		config.common().objectClass(Mensagem.class).cascadeOnDelete(true);;
-		config.common().objectClass(Mensagem.class).cascadeOnUpdate(false);;
+		config.common().objectClass(Mensagem.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Mensagem.class).cascadeOnActivate(true);  //sem cascata
 		config.common().objectClass(Usuario.class).cascadeOnDelete(true);;
 		config.common().objectClass(Usuario.class).cascadeOnUpdate(true);;
@@ -62,7 +62,7 @@ public abstract class DAO<T> implements DAOInterface<T> {
 	public static void abrirBancoServidor(){
 		ClientConfiguration config = Db4oClientServer.newClientConfiguration( ) ;
 		config.common().objectClass(Mensagem.class).cascadeOnDelete(true);;
-		config.common().objectClass(Mensagem.class).cascadeOnUpdate(false);;
+		config.common().objectClass(Mensagem.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Mensagem.class).cascadeOnActivate(true);  //sem cascata
 		config.common().objectClass(Usuario.class).cascadeOnDelete(true);;
 		config.common().objectClass(Usuario.class).cascadeOnUpdate(true);;
