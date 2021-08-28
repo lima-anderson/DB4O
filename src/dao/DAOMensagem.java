@@ -6,8 +6,7 @@ import com.db4o.query.Query;
 
 import modelo.Mensagem;
 
-public class DAOMensagem extends DAO<Mensagem> {
-
+public class DAOMensagem extends DAO<Mensagem>{
 	public Mensagem read(Object chave) {
 		String nome = (String) chave;
 
